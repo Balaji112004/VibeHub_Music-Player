@@ -1,139 +1,154 @@
-VibeHub – Full Stack Web Application
+# VibeHub – Full Stack Web Application
 
-VibeHub is a full-stack web application consisting of:
+VibeHub is a full stack web application consisting of a user-facing frontend, an admin dashboard, and a backend REST API. It is built using React for the frontend and Spring Boot for the backend with MySQL as the database.
 
-A User Frontend (React.js)
+This project demonstrates real-world full stack development including UI, API design, database integration, and application deployment structure.
 
-An Admin Dashboard (React.js)
+---
 
-A Backend API (Spring Boot + MySQL)
+## Tech Stack
 
-The system enables users to interact with the platform while administrators can manage content and operations through a secure admin panel.
+Frontend (User & Admin):
 
-Technology Stack
-Frontend (User & Admin)
+* React.js
+* JavaScript
+* HTML
+* CSS
+* React Router DOM
+* Vite
 
-React.js
+Backend:
 
-JavaScript
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+* Maven
 
-HTML5
+---
 
-CSS3
+## Project Structure
 
-React Router DOM
+vibehub
+├── vibehub-frontend
+├── vibehub-admin
+└── vibehub-backend
 
-Vite
+---
 
-Backend
+## Prerequisites
 
-Java
+Make sure the following software is installed:
 
-Spring Boot
+* Node.js
+* npm
+* Java JDK 17 or higher
+* Maven
+* MySQL
 
-Spring Data JPA
+---
 
-Hibernate
+## Frontend Setup (VibeHub Frontend and Admin)
 
-MySQL
+These steps must be done for both `vibehub-frontend` and `vibehub-admin`.
 
-Maven
+## Step 1 – Go to the project folder
 
-Project Structure
-vibehub/
-│
-├── vibehub-frontend/     # User-facing React application
-├── vibehub-admin/        # Admin dashboard React application
-└── vibehub-backend/      # Spring Boot backend
+Open terminal in the frontend or admin folder.
 
-Prerequisites
-
-Ensure the following software is installed:
-
-Node.js (v16+ recommended)
-
-npm
-
-Java JDK 17+
-
-Maven
-
-MySQL
-
-Frontend Setup (User & Admin)
-
-Perform the following steps for both:
-
-vibehub-frontend
-
-vibehub-admin
-
-Step 1: Navigate to the project folder
+```
 cd vibehub-frontend
-
+```
 
 or
 
+```
 cd vibehub-admin
+```
 
-Step 2: Install dependencies
+---
+
+## Step 2 – Install dependencies
+
+Run the following commands:
+
+```
 npm install
 npm install react-router-dom
+```
 
+This will download all required npm packages.
 
-This will download all required node_modules for the React application.
+---
 
-Step 3: Run the frontend
+## Step 3 – Run the frontend
+
+Start the React application using:
+
+```
 npm run dev
+```
 
+The application will be available in your browser on the port shown in the terminal (usually [http://localhost:5173](http://localhost:5173)).
 
-The application will start and be accessible in your browser at:
+---
 
-http://localhost:5173
+## Backend Setup (Spring Boot)
 
+## Step 1 – Go to backend folder
 
-(or the port shown in the terminal)
-
-Backend Setup (Spring Boot)
-Step 1: Navigate to backend folder
+```
 cd vibehub-backend
+```
 
-Step 2: Configure MySQL
+---
 
-Update application.properties or application.yml with your database credentials:
+## Step 2 – Configure MySQL
 
+Open `application.properties` or `application.yml` and update:
+
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/vibehub
 spring.datasource.username=your_username
 spring.datasource.password=your_password
+```
 
+Make sure the `vibehub` database exists in MySQL.
 
-Ensure the database vibehub exists in MySQL.
+---
 
-Step 3: Run the backend
+## Step 3 – Run the backend
+
+Run the Spring Boot application:
+
+```
 mvn spring-boot:run
+```
 
+The backend server will start on:
 
-The backend server will start at:
-
+```
 http://localhost:8080
+```
 
-How the System Works
+---
 
-The Frontend and Admin Panel communicate with the Spring Boot REST API
+## How the Application Works
 
-The Spring Boot backend processes requests and interacts with the MySQL database
+The React frontend and admin dashboard send requests to the Spring Boot backend through REST APIs. The backend processes the requests, interacts with the MySQL database, and returns JSON responses to the frontend.
 
-Data is exchanged in JSON format via RESTful APIs
+---
 
-Important Notes
+## Important Notes
 
-Do not commit node_modules/, target/, or .env files to GitHub
+* Do not upload `node_modules`, `target`, or `.env` files to GitHub
+* Always start the backend before running the frontend
+* Use separate login for Admin and User if applicable
 
-Ensure backend is running before using frontend or admin dashboard
+---
 
-Use separate browsers or sessions for Admin and User login
-
-Author
+## Author
 
 Balaji Kanthan
-Java Full Stack Developer (React + Spring Boot)
+Java Full Stack Developer (React, Spring Boot, MySQL)
