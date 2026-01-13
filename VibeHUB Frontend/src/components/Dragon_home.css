@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+body{
+    
+    background-color: #121212;
+}
+.navv{
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    font-size: 37px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.back,.lis{
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 3px;
+    width: 60px;
+    height: 60px;
+    color: black;
+    position: relative;
+}
+.maain{
+    font-size: 34px;
+}
+.main{
+    display: grid;
+    gap: 10px;
+    
+    grid-template-columns: 2fr 1fr;
+    
+}
+.pop{
+    font-family: "Poppins", sans-serif;
+}
+.headi{
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.left{
+    /* border: 3px solid white; */
+    border-radius: 10px;
+    height: 85vh;
+        display: flex;
+    flex-direction: column;
+    /* height:auto; */
+    background-color:rgb(37, 37, 37);
+}
+.right{
+    height: 85vh;
+    /* border: 3px solid white; */
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 3.2fr 1fr;
+    background-color:rgb(37, 37, 37);
+}
+.move{
+    height: 70px;
+    width: 300px;
+}
+.left_top{
+    display: flex;
+}
+.left1{
+    width: 40%;
+}
+.left2{
+   width: 60%;
+   font-family: "Poppins", sans-serif;
+}
+
+
+.image{
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+}
+.maain{
+    color: white;
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-family: "Poppins", sans-serif;
+}
+.movie{
+    margin-top: 70px;
+    line-height: 1.8;
+    font-size: 25px;
+    width:400px;
+    color: white;
+}
+#song_imagee{
+    height: 380px;
+    padding: 20px;
+    padding-top: 35px;
+}
+    
+.songs_list li:hover {
+    
+    /* color: rgb(58, 253, 58); */
+    background-color:rgb(25, 25, 25);
+}
+.songs_list{
+    /* width: 80%; */
+
+       flex: 1;
+    overflow-y: auto;
+    
+    list-style: none;
+   margin-left:40px;
+   margin-top: 25px;
+   font-family: "Poppins", sans-serif;
+}
+hr{
+    margin: 0;
+}
+.songs_list li{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    /* margin-top: 20px; */
+    padding-top: 18px;
+    padding-bottom:18px ;
+    /* padding-left: 25px; */
+    border-radius: 10px;
+    /* margin-bottom: 25px; */
+}
+.controls{
+    color: white;
+    font-size: 45px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+.prev:hover,
+.next:hover,
+.play:hover {
+    background-color:rgb(58, 253, 58);
+    color: white;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.prev{
+    background-color: white;
+    color: black;
+    display: flex;
+    padding: 12px;
+    width: 65px;
+    margin-top: 26px;
+    margin-left: 10px;
+    height: 67px;
+    border-radius: 50%;
+}
+.next{
+    background-color: white;
+    color: black;
+    display: flex;
+    padding: 12px;
+    width: 65px;
+    margin-top: 26px;
+    margin-left: 40px;
+    height: 67px;
+    border-radius: 50%;
+}
+.play{
+    background-color: white;
+    color: black;
+    padding: 12px;
+    width: 75px;
+    margin-left: 40px;
+    height: 79px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.play i{
+    font-size: 1.2em;
+    /* margin-left: 2px; */
+    /* margin-top: 2px; */
+}
+#progress{
+    
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+@media(max-width:480px){
+    .left{
+        display: none;
+    }
+    .back{
+        width: 50px;
+        height: 50px;
+        padding: 0px;
+    }
+    .in{
+        position: absolute;
+        top: 12px;
+        left:12px
+    }
+    #song_imagee{
+        height: 290px;
+        width: 270px;
+    }
+    .right{
+        height: 82vh;
+        margin-left: 30px;
+    }
+    .controls{
+        padding-bottom: 25px;
+    }
+    .prev{
+        margin-left: 20px;
+    }
+    .next{
+        margin-right: 20px;
+    }
+}
